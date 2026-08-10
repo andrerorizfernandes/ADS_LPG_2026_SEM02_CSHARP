@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EstruturaClasse
+{
+    public class Veiculo
+    {
+        public string Placa { get; set; }
+        public string Cor { get; set; }
+        public string Modelo { get; set; }
+        public int Ano { get; set; }
+        public double Potencia { get; set; }
+
+        public double AlugarCarro(double ValorAluguel, string TipoPessoa)
+        {
+            switch(TipoPessoa)
+            {
+                case "F":
+                    return ValorAluguel - (ValorAluguel * 0.05);
+                case "J":
+                    return ValorAluguel - (ValorAluguel * 0.15);
+                default:
+                    throw new ArgumentException("Tipo de pessoa inválido.");
+                }
+            }
+    }
+}
