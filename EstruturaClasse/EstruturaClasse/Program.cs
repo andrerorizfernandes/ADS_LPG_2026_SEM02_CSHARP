@@ -20,6 +20,21 @@ namespace EstruturaClasse
             double valorFinal = veiculo.AlugarCarro(valorAluguel, tipoPessoa);
             Console.WriteLine($"O valor final do aluguel é: {valorFinal:C}");
 
+            veiculo.Placa = "ABC-1234";
+            veiculo.Ano = 2020;
+            veiculo.Cor = "Preto";
+            veiculo.Modelo = "Sedan";
+            veiculo.Potencia = 150.0;
+            veiculo.SetChassi("9BWZZZ377VT004251");
+
+            Console.WriteLine(
+                veiculo.Placa + "\n" + 
+                veiculo.Ano +  "\n" + 
+                veiculo.Cor + "\n" + 
+                veiculo.Modelo + "\n" + 
+                veiculo.Potencia + "\n" + 
+                veiculo.GetChassi());
+
             Console.ReadKey();
         }
     }

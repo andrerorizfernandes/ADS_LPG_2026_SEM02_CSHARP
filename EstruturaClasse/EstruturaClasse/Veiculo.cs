@@ -14,6 +14,18 @@ namespace EstruturaClasse
         public string Modelo { get; set; }
         public int Ano { get; set; }
         public double Potencia { get; set; }
+     
+        private string chassi;
+
+        public string GetChassi()
+        {
+            return this.chassi;
+        }
+
+        public void SetChassi(string value)
+        {
+            this.chassi = value;
+        }
 
         public double AlugarCarro(double ValorAluguel, string TipoPessoa)
         {
