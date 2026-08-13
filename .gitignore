@@ -1,0 +1,8 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/01-Estrutura classes/ProjetoVeiculo/.vs/ProjetoVeiculo.slnx
+/01-Estrutura classes/ProjetoVeiculo/bin/Debug
+/01-Estrutura classes/ProjetoVeiculo/obj/Debug
+/01-Estrutura classes/ProjetoVeiculo/Properties
