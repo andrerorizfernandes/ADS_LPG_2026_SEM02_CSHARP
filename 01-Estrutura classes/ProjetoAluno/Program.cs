@@ -19,6 +19,8 @@ namespace ProjetoAluno
             alTeste.SetNomePai("José da Silva");
             alTeste.SetNomeMae("Maria da Silva");
             alTeste.SetEscolaridade("Ensino Médio Completo");
+            alTeste.EnderecoPai = "Rua dos Pais, 456";
+            alTeste.Idade = 18;
 
             alTeste.Matricular(689);
 
@@ -29,7 +31,9 @@ namespace ProjetoAluno
             Console.WriteLine(alTeste.GetEndereco());
             Console.WriteLine(alTeste.GetNomePai());
             Console.WriteLine(alTeste.GetNomeMae());
-            Console.WriteLine(alTeste.Getescolaridade());        
+            Console.WriteLine(alTeste.Getescolaridade());
+            Console.WriteLine(alTeste.EnderecoPai);
+            Console.WriteLine(alTeste.Idade);
         }
     }
 }

@@ -17,6 +17,16 @@ namespace ProjetoAluno
         private string nomeMae;
         private string escolaridade;
 
+        private string enderecoPai;
+
+        public string EnderecoPai
+        {
+            get { return enderecoPai; }
+            set { enderecoPai = value; }
+        }
+
+        public int Idade { get; set; }
+
         public int GetMatricula()
         {
             return matricula;
