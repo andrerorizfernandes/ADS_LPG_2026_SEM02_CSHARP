@@ -1,4 +1,5 @@
 <Solution>
-  <Project Path="ConsoleApp/ConsoleApp.csproj" />
-  <Project Path="WindowsFormsApp/WindowsFormsApp.csproj" />
+  <Project Path="ConsoleApp/ConsoleApp.csproj" Id="f3f95191-4b9d-4938-a394-664fe6d97906" />
+  <Project Path="WebApplication/WebApplicationApp.csproj" Id="14384000-e185-4dac-b244-3a0fb7c7a36b" />
+  <Project Path="WindowsFormsApp/WindowsFormsApp.csproj" Id="725652c1-21fc-4eb5-9d7c-6b38a45c88b0" />
 </Solution>
