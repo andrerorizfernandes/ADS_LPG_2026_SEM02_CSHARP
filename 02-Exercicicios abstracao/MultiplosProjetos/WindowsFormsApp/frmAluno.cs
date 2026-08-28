@@ -14,12 +14,13 @@ namespace WindowsFormsApp
     {
         private void Salvar()
         {
-            Aluno aluno = new Aluno();
-            aluno.Codigo = int.Parse(txtCodigo.Text);
-            aluno.Cpf = txtCpf.Text;
-            aluno.Nome = txtNome.Text;
-            aluno.Curso = txtCurso.Text;
-            aluno.Telefone = txtTelefone.Text;
+            Aluno aluno = new Aluno(
+                int.Parse(txtCodigo.Text), 
+                txtCpf.Text, 
+                txtNome.Text, 
+                txtCurso.Text, 
+                txtTelefone.Text);
+            
             MessageBox.Show("Aluno salvo com sucesso!" + 
                     "\n\nCódigo: " + aluno.Codigo + 
                     "\nCPF: " + aluno.Cpf + 

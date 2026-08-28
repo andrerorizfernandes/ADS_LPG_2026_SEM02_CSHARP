@@ -11,14 +11,39 @@ namespace WebApplication
     {
         private void CadastrarProfessor(string nome, string disciplina, int cargaHoraria)
         {
-            Professor prof = new Professor();
-            prof.Nome = nome;
-            prof.Disciplina = disciplina;
-            prof.CargaHoraria = cargaHoraria;
+            Professor prof01 = new Professor();
+            prof01.Nome = nome;
+            prof01.Disciplina = disciplina;
+            prof01.CargaHoraria = cargaHoraria;
+
+            Professor prof02 = new Professor(int.Parse(txtCargaHoraria.Text));
+            prof02.Nome = txtNome.Text;
+            prof02.Disciplina = txtDisciplina.Text;
+
+            Professor prof03 = new Professor(
+                txtNome.Text, 
+                txtDisciplina.Text, 
+                int.Parse(txtCargaHoraria.Text));     
+
             lblResultado.Text =
-                $"Professor {prof.Nome} cadastrado com sucesso!<br />" +
-                $"Disciplina: {prof.Disciplina}<br />" +
-                $"Carga Horária: {prof.CargaHoraria} horas.";
+                $"Exemplo sem construtor<br />" +
+                $"Professor {prof01.Nome}<br />" +
+                $"Disciplina: {prof01.Disciplina}<br />" +
+                $"Carga Horária: {prof01.CargaHoraria} horas." +
+
+                $"<br /><br />" +
+
+                $"Exemplo com construtor de carga horária multiplicando por 2<br />" +
+                $"Professor {prof02.Nome}<br />" +
+                $"Disciplina: {prof02.Disciplina}<br />" +
+                $"Carga Horária: {prof02.CargaHoraria} horas." +
+
+                $"<br /><br />" +
+
+                $"Exemplo com construtor preenchendo todos os atributos<br />" +
+                $"Professor {prof03.Nome}<br />" +
+                $"Disciplina: {prof03.Disciplina}<br />" +
+                $"Carga Horária: {prof03.CargaHoraria} horas.";
         }
 
         protected void Page_Load(object sender, EventArgs e)

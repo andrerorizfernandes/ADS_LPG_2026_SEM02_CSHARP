@@ -13,5 +13,14 @@ namespace WindowsFormsApp
         public string Nome { get; set; }
         public string Curso { get; set; }
         public string Telefone { get; set; }
+
+        public Aluno(int codigo, string cpf, string nome, string curso, string telefone)
+        {
+            Codigo = codigo;
+            Cpf = cpf;
+            Nome = nome;
+            Curso = curso;
+            Telefone = telefone;
+        }
     }
 }
