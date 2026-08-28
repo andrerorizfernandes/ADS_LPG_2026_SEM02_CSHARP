@@ -23,11 +23,16 @@ namespace BancoHeranca
             {
                 case 0: // Conta Corrente
                     Conta contaCorrente = new Conta();
+                    contaCorrente.Saldo = 1000;
                     contaCorrente.Saca(double.Parse(txtValor.Text));
                     MessageBox.Show("Saque realizado com sucesso! Novo saldo: " + contaCorrente.Saldo);
                     break;
                 case 1: // Conta Poupança
                     ContaPoupanca contaPoupanca = new ContaPoupanca();
+                    contaPoupanca.Saldo = 1000;
+                    contaPoupanca.Titular = new Cliente();
+                    contaPoupanca.Titular.Nome = "João";
+                    contaPoupanca.Numero = 12345;
                     contaPoupanca.Saca(double.Parse(txtValor.Text));
                     MessageBox.Show("Saque realizado com sucesso! Novo saldo: " + contaPoupanca.Saldo);
                     break;

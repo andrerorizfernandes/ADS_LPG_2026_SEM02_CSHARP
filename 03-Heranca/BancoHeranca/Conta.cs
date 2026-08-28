@@ -12,9 +12,9 @@ namespace BancoHeranca
         public double Saldo { get; set; }
         public Cliente Titular { get; set; }
         
-        public void Saca(double valor) { 
+        public virtual void Saca(double valor) { 
             this.Saldo -= valor;
-        }
+        }   
 
         public void Deposita(double valor)
         {

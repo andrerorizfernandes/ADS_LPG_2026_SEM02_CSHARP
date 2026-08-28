@@ -6,20 +6,11 @@ using System.Threading.Tasks;
 
 namespace BancoHeranca
 {
-    public class ContaPoupanca
+    public class ContaPoupanca : Conta
     {
-        public int Numero { get; set; }
-        public double Saldo { get; set; }
-        public Cliente Titular { get; set; }
-
-        public void Saca(double valor)
+        public override void Saca(double valor)
         {
-            this.Saldo -= (valor + 0.10);
-        }
-
-        public void Deposita(double valor)
-        {
-            this.Saldo += valor;
+            this.Saldo -= valor + 0.10;
         }
     }
 }
