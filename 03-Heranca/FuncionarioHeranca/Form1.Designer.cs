@@ -39,7 +39,9 @@
             this.cboTipoFuncionario.FormattingEnabled = true;
             this.cboTipoFuncionario.Items.AddRange(new object[] {
             "Funcionário",
-            "Gerente"});
+            "Gerente",
+            "Supervisor",
+            "Diretor"});
             this.cboTipoFuncionario.Location = new System.Drawing.Point(12, 35);
             this.cboTipoFuncionario.Name = "cboTipoFuncionario";
             this.cboTipoFuncionario.Size = new System.Drawing.Size(167, 21);

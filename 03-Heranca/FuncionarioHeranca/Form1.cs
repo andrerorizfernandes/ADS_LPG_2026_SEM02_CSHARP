@@ -27,6 +27,22 @@ namespace FuncionarioHeranca
                     salarioCalculado = ger.PagarSalario(Convert.ToDouble(txtSalario.Text));
                     MessageBox.Show("O salário do gerente é " + salarioCalculado.ToString());
                     break;
+                case 2:
+                    Supervisor sup = new Supervisor();
+                    sup.Escolaridade = "Superior";
+                    sup.Departamento = "Tecnologia";
+                    salarioCalculado = sup.PagarSalario(Convert.ToDouble(txtSalario.Text));
+                    MessageBox.Show("O salário do supervisor é " + salarioCalculado.ToString() +
+                        "\nEscolaridade: " + sup.Escolaridade +
+                        "\nDepartamento: " + sup.Departamento);
+                    break;
+                case 3:
+                    Diretor dir = new Diretor();
+                    salarioCalculado = dir.PagarSalario(Convert.ToDouble(txtSalario.Text));
+                    var bonificacao = dir.PagarBonificacao(2000);
+                    MessageBox.Show("O salário do diretor é " + salarioCalculado.ToString() +
+                        "\nA bonificação é: " + bonificacao.ToString());
+                    break;
             }
         }
 
