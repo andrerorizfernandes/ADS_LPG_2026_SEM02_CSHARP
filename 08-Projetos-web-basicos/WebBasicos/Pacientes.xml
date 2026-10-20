@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pacientes>
+	<Paciente>
+		<Codigo>1</Codigo>
+		<Nome>Andre</Nome>
+		<Telefone>300101</Telefone>
+		<Email>ads@gmail.com</Email>
+	</Paciente>
+
+	<Paciente>
+		<Codigo>2</Codigo>
+		<Nome>Carlos</Nome>
+		<Telefone>300113</Telefone>
+		<Email>ads@gmail.com</Email>
+	</Paciente>
+
+	<Paciente>
+		<Codigo>3</Codigo>
+		<Nome>José Filho</Nome>
+		<Telefone>300987</Telefone>
+		<Email>ads@gmail.com</Email>
+	</Paciente>
+
+	<Paciente>
+		<Codigo>4</Codigo>
+		<Nome>Max</Nome>
+		<Telefone>300122</Telefone>
+		<Email>ads@gmail.com</Email>
+	</Paciente>
+
+	<Paciente>
+		<Codigo>5</Codigo>
+		<Nome>Fernando</Nome>
+		<Telefone>300333</Telefone>
+		<Email>ads@gmail.com</Email>
+	</Paciente>
+
+	<Paciente>
+		<Codigo>6</Codigo>
+		<Nome>Felipe</Nome>
+		<Telefone>300999</Telefone>
+		<Email>ads@gmail.com</Email>
+	</Paciente>
+
+	<Paciente>
+		<Codigo>7</Codigo>
+		<Nome>Pedro</Nome>
+		<Telefone>300222</Telefone>
+		<Email>ads@gmail.com</Email>
+	</Paciente>
+
+	<Paciente>
+		<Codigo>8</Codigo>
+		<Nome>Fábio</Nome>
+		<Telefone>300222</Telefone>
+		<Email>ads@gmail.com</Email>
+	</Paciente>
+
+	<Paciente>
+		<Codigo>9</Codigo>
+		<Nome>ads@gmail.comon</Nome>
+		<Telefone>300777</Telefone>
+		<Email>ads@gmail.com</Email>
+	</Paciente>
+
+	<Paciente>
+		<Codigo>10</Codigo>
+		<Nome>Valdomiro</Nome>
+		<Telefone>300244</Telefone>
+		<Email>ads@gmail.com</Email>
+	</Paciente>
+</Pacientes>

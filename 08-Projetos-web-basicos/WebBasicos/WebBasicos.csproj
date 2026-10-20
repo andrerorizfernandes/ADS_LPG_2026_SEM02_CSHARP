@@ -70,6 +70,8 @@
     <Content Include="Exemplo_01.aspx" />
     <Content Include="Exemplo_02.aspx" />
     <Content Include="Exemplo_03.aspx" />
+    <Content Include="Exemplo_04.aspx" />
+    <Content Include="Pacientes.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +96,14 @@
     <Compile Include="Exemplo_03.aspx.designer.cs">
       <DependentUpon>Exemplo_03.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Exemplo_04.aspx.cs">
+      <DependentUpon>Exemplo_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exemplo_04.aspx.designer.cs">
+      <DependentUpon>Exemplo_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
