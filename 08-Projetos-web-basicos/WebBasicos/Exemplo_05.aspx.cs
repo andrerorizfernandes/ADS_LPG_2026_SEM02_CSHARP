@@ -10,8 +10,6 @@ namespace WebBasicos
 {
     public partial class Exemplo_05 : System.Web.UI.Page
     {
-        const string STRING_CONEXAO = @"server=127.0.0.1;user=root;password=;database=ads";
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,20 +20,25 @@ namespace WebBasicos
 
         public void CarregarDados()
         {
-            MySqlConnection con = new MySqlConnection(STRING_CONEXAO);
-            con.Open();
-            MySqlCommand comando = new MySqlCommand("select id, nome, matricula, curso from aluno", con);
+            MySqlCommand comando = new MySqlCommand("select id, nome, matricula, curso from aluno", Conexao());
             MySqlDataReader dr = comando.ExecuteReader();
 
             gvDados.DataSource = dr;
             gvDados.DataBind();
         }
 
-        public bool Inserir(Aluno aluno)
+        public MySqlConnection Conexao()
         {
+            const string STRING_CONEXAO = @"server=127.0.0.1;user=root;password=;database=ads";
+
             MySqlConnection con = new MySqlConnection(STRING_CONEXAO);
             con.Open();
-            MySqlCommand comando = new MySqlCommand("Insert Into aluno(nome, matricula, curso) Values (@Nome, @Matricula, @Curso)", con);
+            return con;
+        }
+
+        public bool InserirAluno(Aluno aluno)
+        {
+            MySqlCommand comando = new MySqlCommand("Insert Into aluno(nome, matricula, curso) Values (@Nome, @Matricula, @Curso)", Conexao());
             comando.Parameters.AddWithValue("@Nome", aluno.Nome);
             comando.Parameters.AddWithValue("@Matricula", aluno.Matricula);
             comando.Parameters.AddWithValue("@Curso", aluno.Curso);
@@ -44,11 +47,9 @@ namespace WebBasicos
             return (dr.RecordsAffected > 0);
         }
 
-        public bool Editar(Aluno aluno)
+        public bool EditarAluno(Aluno aluno)
         {
-            MySqlConnection con = new MySqlConnection(STRING_CONEXAO);
-            con.Open();
-            MySqlCommand comando = new MySqlCommand("Update aluno Set nome = @Nome, matricula = @Matricula, curso = @Curso Where id=@ID", con);
+            MySqlCommand comando = new MySqlCommand("Update aluno Set nome = @Nome, matricula = @Matricula, curso = @Curso Where id=@ID", Conexao());
             comando.Parameters.AddWithValue("@Nome", aluno.Nome);
             comando.Parameters.AddWithValue("@Matricula", aluno.Matricula);
             comando.Parameters.AddWithValue("@Curso", aluno.Curso);
@@ -58,40 +59,41 @@ namespace WebBasicos
             return (dr.RecordsAffected > 0);
         }
 
-        public bool Excluir(Aluno aluno)
+        public bool ExcluirAluno(Aluno aluno)
         {
-            MySqlConnection con = new MySqlConnection(STRING_CONEXAO);
-            con.Open();
-            MySqlCommand comando = new MySqlCommand("Delete From aluno Where id=@ID", con);
+            MySqlCommand comando = new MySqlCommand("Delete From aluno Where id=@ID", Conexao());
             comando.Parameters.AddWithValue("@ID", aluno.Id);
             MySqlDataReader dr = comando.ExecuteReader();
 
             return (dr.RecordsAffected > 0);
         }
 
-        public void InserirAluno()
+        private void LimparCampos()
+        {
+            txtID.Text = string.Empty;
+            txtNome.Text = string.Empty;
+            txtMatricula.Text = string.Empty;
+            txtCurso.Text = string.Empty;
+        }
+
+        public void Inserir()
         {
             Aluno aluno = new Aluno();
             aluno.Nome = txtNome.Text;
             aluno.Matricula = txtMatricula.Text;
             aluno.Curso = txtCurso.Text;
 
-            if (Inserir(aluno))
+            lblRetornoOperacao.Text = "Falha ao adicionar aluno";
+            if (InserirAluno(aluno))
             {
+                LimparCampos();
                 lblRetornoOperacao.Text = "Aluno adicionado com sucesso";
-                txtNome.Text = string.Empty;
-                txtMatricula.Text = string.Empty;
-                txtCurso.Text = string.Empty;
-            }
-            else
-            {
-                lblRetornoOperacao.Text = "Falha ao adicionar aluno";   
             }
 
             CarregarDados();
         }
 
-        public void EditarAluno()
+        public void Editar()
         {
             Aluno aluno = new Aluno();
             aluno.Id = Convert.ToInt32(txtID.Text);
@@ -99,38 +101,26 @@ namespace WebBasicos
             aluno.Matricula = txtMatricula.Text;
             aluno.Curso = txtCurso.Text;
 
-            if (Editar(aluno))
+            lblRetornoOperacao.Text = "Falha ao editar aluno";
+            if (EditarAluno(aluno))
             {
+                LimparCampos();
                 lblRetornoOperacao.Text = "Aluno editado com sucesso";
-                txtID.Text = txtID.Text;
-                txtNome.Text = string.Empty;
-                txtMatricula.Text = string.Empty;
-                txtCurso.Text = string.Empty;
-            }
-            else
-            {
-                lblRetornoOperacao.Text = "Falha ao editar aluno";
             }
 
             CarregarDados();
         }
 
-        public void ExcluirAluno()
+        public void Excluir()
         {
             Aluno aluno = new Aluno();
             aluno.Id = Convert.ToInt32(txtID.Text);
 
-            if (Excluir(aluno))
+            lblRetornoOperacao.Text = "Falha ao excluir aluno";
+            if (ExcluirAluno(aluno))
             {
+                LimparCampos();
                 lblRetornoOperacao.Text = "Aluno excluído com sucesso";
-                txtID.Text = txtID.Text;
-                txtNome.Text = string.Empty;
-                txtMatricula.Text = string.Empty;
-                txtCurso.Text = string.Empty;
-            }
-            else
-            {
-                lblRetornoOperacao.Text = "Falha ao excluir aluno";
             }
 
             CarregarDados();
@@ -138,17 +128,17 @@ namespace WebBasicos
 
         protected void btnInserir_Click(object sender, EventArgs e)
         {
-            InserirAluno();
+            Inserir();
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            EditarAluno();
+            Editar();
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
         {
-            ExcluirAluno();
+            Excluir();
         }
 
         protected void btnAtualizar_Click(object sender, EventArgs e)
