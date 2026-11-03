@@ -1,0 +1,6 @@
+C:\Users\Andre Roriz\Downloads\ADS_LPG_2026_SEM02_CSHARP\DataSchool2026\Pojo\bin\Debug\Pojo.dll
+C:\Users\Andre Roriz\Downloads\ADS_LPG_2026_SEM02_CSHARP\DataSchool2026\Pojo\bin\Debug\Pojo.pdb
+C:\Users\Andre Roriz\Downloads\ADS_LPG_2026_SEM02_CSHARP\DataSchool2026\Pojo\obj\Debug\Pojo.csproj.AssemblyReference.cache
+C:\Users\Andre Roriz\Downloads\ADS_LPG_2026_SEM02_CSHARP\DataSchool2026\Pojo\obj\Debug\Pojo.csproj.CoreCompileInputs.cache
+C:\Users\Andre Roriz\Downloads\ADS_LPG_2026_SEM02_CSHARP\DataSchool2026\Pojo\obj\Debug\Pojo.dll
+C:\Users\Andre Roriz\Downloads\ADS_LPG_2026_SEM02_CSHARP\DataSchool2026\Pojo\obj\Debug\Pojo.pdb

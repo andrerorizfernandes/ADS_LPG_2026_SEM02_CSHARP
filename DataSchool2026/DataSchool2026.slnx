@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Dal/Dal.csproj" />
+  <Project Path="Pojo/Pojo.csproj" />
+</Solution>
