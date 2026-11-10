@@ -8,7 +8,7 @@ namespace Pojo
 {
     public class Aluno
     {
-        public int Codigo { get; set; }
+        public int CodigoAluno { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
         public string Sexo { get; set; }

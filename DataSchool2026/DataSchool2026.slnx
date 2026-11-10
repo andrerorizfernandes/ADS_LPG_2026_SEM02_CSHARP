@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="Dal/Dal.csproj" />
-  <Project Path="Pojo/Pojo.csproj" />
+  <Project Path="Dal/Dal.csproj" Id="1e4fa00e-a3c9-4e13-a249-627f85196c32" />
+  <Project Path="Pojo/Pojo.csproj" Id="ce13a51e-7d60-4c9d-a24e-626ba74cef04" />
 </Solution>
