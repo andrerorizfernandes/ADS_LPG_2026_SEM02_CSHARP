@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="Bll/Bll.csproj" Id="32f3f501-7f36-4090-af29-910c76b6128d" />
   <Project Path="Dal/Dal.csproj" Id="1e4fa00e-a3c9-4e13-a249-627f85196c32" />
   <Project Path="Pojo/Pojo.csproj" Id="ce13a51e-7d60-4c9d-a24e-626ba74cef04" />
+  <Project Path="View/View.csproj" Id="288134fe-9f22-4e41-8938-49f2af42b4d6" />
 </Solution>

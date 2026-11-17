@@ -1,4 +1,4 @@
-﻿using MySqlConnector;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,9 @@ namespace Dal
 {
     public class Conexao
     {
+        private static string stringConexao = "server=127.0.0.1;user=root;password=;database=dataschool";
         public static MySqlConnection ConectarBD()
         {
-            const string stringConexao = "server=127.0.0.1;user=root;password=;database=dataschool";
-
             MySqlConnection conexao = new MySqlConnection(stringConexao);
             conexao.Open();
             return conexao;
